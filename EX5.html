@@ -1,0 +1,65 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercício 5</title>
+</head>
+<body>
+  <h1>Leitor de Data:</h1>
+  <p> Data: <time datetime=""><span id="data"></span></time></p>
+
+  <script>
+    let dia = Number(prompt("Digite um dia"));
+    
+    let mes = Number(prompt("Digite um mes"));
+    let ano = Number(prompt("Digite um ano"));
+    
+    let nmes;
+
+    switch (mes) {
+      case 1:
+        nmes = "Janeiro";
+        break;
+      case 2:
+        nmes = "Fevereiro";
+        break;
+      case 3:
+        nmes = "Março";
+        break;
+      case 4:
+        nmes = "Abril";
+        break;
+      case 5:
+        nmes = "Maio";
+        break;
+      case 6:
+        nmes = "Junho";
+        break;
+      case 7:
+        nmes = "Julho";
+        break;
+      case 8:
+        nmes = "Agosto";
+        break;
+      case 9:
+        nmes = "Setembro";
+        break;
+      case 10:
+        nmes = "Outubro";
+        break;
+      case 11:
+        nmes = "Novembro";
+        reak;
+      case 12:
+        nmes = "Dezembro";
+        break;
+      default:
+        nmes = "Mês inválido";
+    }
+    document.getElementById("data").innerHTML = dia + "/" + nmes + "/" + ano;
+    
+  </script>
+  
+</body>
+</html>

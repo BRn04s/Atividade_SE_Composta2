@@ -1,0 +1,66 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercício 2</title>
+</head>
+<body>
+  <h1>Peso</h1>
+  <hr>
+         <h3>Informações: </h3><span id="ndecre"></span>
+ 
+    <script>
+      let p1 = prompt("Digite o nome da primeira pessoa.");
+      let peso1 = Number(prompt("Digite seu peso"));
+      let p2 = prompt("Digite o nome da segunda pessoa.");
+      let peso2 = Number(prompt("Digite seu peso."));
+      let p3 = prompt("Digite o nome da terceira pessoa.");
+      let peso3 = Number(prompt("Digite seu peso."));
+      
+      let pa;
+      let pb;
+      let pc;
+      
+      if(peso1 >= peso2 && peso1 > peso3) {
+        pa = p1 + " pesa " + peso1 + " Kg";
+        if (peso2 > peso3){
+          pb = p2 + " pesa " + peso2 + " Kg";
+          pc = p3 + " pesa " + peso3 + " Kg";
+        }else{
+          pb = p3 + " pesa " + peso3 + " Kg";
+          pc = p2 + " pesa " + peso2 + " Kg";
+        }
+      }
+      if (peso2 >= peso1 && peso2 > peso3) {
+          pa = p2 + " pesa " + peso2 + " Kg";
+          if (peso1 > peso3) {
+            pb = p1 + " pesa " + peso1 + " Kg";
+            pc = p3 + " pesa " + peso3 + " Kg";
+          } else {
+            pb = p3 + " pesa " + peso3 + " Kg";
+            pc = p1 + " pesa " + peso1 + " Kg";
+          }
+        }
+        if (peso3 >= peso1 && peso3 > peso2) {
+            pa = p3 + " pesa " + peso3 + " Kg";
+            if (peso2 > peso1) {
+              pb = p2 + " pesa " + peso2 + " Kg";
+              pc = p1 + " pesa " + peso1 + " Kg";
+            } else {
+              pb = p1 + " pesa " + peso1 + " Kg";
+              pc = p2 + " pesa " + peso2 + " Kg";
+            }
+          }
+        if (peso1 === peso2 && peso1 === peso3) {
+            pa = p1 + " pesa " + peso1 + " Kg";
+            pb = p2 + " pesa " + peso2 + " Kg";
+            pc = p3 + " pesa " + peso3 + " Kg";
+          }
+          
+          
+        document.getElementById("ndecre").innerHTML = "Pessoa 1: " + pa + "</br>" + "Pessoa 2: " + pb + "</br>" + " Pessoa 3: " + pc;
+      </script>
+  
+</body>
+</html>

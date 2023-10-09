@@ -1,0 +1,48 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Fast Food - Menu</h1>
+  <hr
+
+  <h3> Cliente: </h3><span id="cliente"></span>
+  <h3> Pedido: </h3><span id="pedido"></span>
+
+  <script>
+    let cliente = prompt("Digite seu nome");
+    let opcao = Number(prompt("Digite o número da opção escolhida"));
+    
+    let opcao1 = "Big Super" + "</br>" + "Especificação: 2 hambúrgueres, queijo batata frita e refrigerante." + "</br>" + "Preço (R$): 5,00";
+  
+    let opcao2 = "Quase Super Sanduba" + "</br>" + "Especificação: 1 hambúrguer, batata frita e refrigerante." + "</br>" + "Preço(R$): 3,00";
+    
+    let opcao3 = "Mirradus Sanduba" + "</br>" + "Especificação: 1 misto quente e refrigerante." + "</br>" + "Preço(R$): 1,50";
+
+    let pedido;
+
+    if (opcao == 1) {
+      pedido = opcao1;
+      
+      }else if (opcao == 2) {
+        pedido = opcao2;
+        
+      }else if (opcao == 3){
+        pedido = opcao3;
+        
+      }else{
+        pedido = "Opção Inválida";
+      }
+
+    document.getElementById("cliente").innerHTML = cliente;
+    document.getElementById("pedido").innerHTML = pedido;
+  </script>
+
+</body>
+
+</html>

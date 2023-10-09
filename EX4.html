@@ -1,0 +1,40 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercício 4</title>
+</head>
+
+<body>
+  <h1>Calculando a comissão:</h1>
+
+  <p>Funcionário: <span id="funcionario"></span></p>
+  <p>Quantidade de produtos vendidos: <span id="produtos"></span></p>
+  <p> Valor total da comissão: <span id="comissao"></span></p>
+
+  <script>
+    let funcionario = prompt("Digite o nome do funcionário.");
+    let produtos = Number(prompt("Digite o número de produtos vendidos pelo funcionário."));
+
+    let cdpt;
+
+    if (produtos <= 250) {
+      cdpt = produtos * 1.00;
+    } else {
+      cdpt = produtos * 1.50;
+
+      if (produtos > 500) {
+        cdpt = produtos * 2.00;
+      }
+    }
+
+    document.getElementById("funcionario").innerHTML = funcionario;
+    document.getElementById("produtos").innerHTML = produtos;
+    document.getElementById("comissao").innerHTML = "R$ " + cdpt;
+  </script>
+
+</body>
+
+</html>
